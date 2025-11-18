@@ -1,0 +1,133 @@
+.about-wrapper {
+width: 100%;
+min-height: 100vh;
+background: #0f1a2b;
+display: flex;
+justify-content: center;
+padding: 80px 20px;
+ animation: fadeIn 1s ease forwards;
+
+}
+
+
+.about-container {
+max-width: 900px;
+background: rgba(28, 47, 70, 0.6);
+padding: 40px 50px;
+border-radius: 16px;
+box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+backdrop-filter: blur(4px);
+color: #ffffff;
+}
+
+
+.about-title {
+font-size: 2.8rem;
+font-weight: 700;
+text-align: center;
+margin-bottom: 25px;
+color: #ffffff;
+text-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+
+.about-text {
+font-size: 1.2rem;
+line-height: 1.7;
+margin-bottom: 22px;
+color: #e3e8ef;
+}
+
+.about-list {
+    list-style: none;          /* uklanja default tackice */
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.about-list li {
+    position: relative;
+    padding-left: 32px;        /* prostor za ikonicu */
+    margin-bottom: 14px;
+    font-size: 1.1rem;
+    color: #d0d6e1;
+    line-height: 1.5;
+}
+
+.about-list li::before {
+    content: "🔧";             /* ovde se menja ikonica */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+/* PRE I POSLE - sekcija */
+.compare-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.compare-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #d0d6e1;
+}
+
+/* slike jedna pored druge */
+.compare-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.compare-item {
+  position: relative;
+  width: 320px;
+}
+
+.compare-label {
+  display: block;
+  font-weight: 700;
+  color: #d0d6e1;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* slika */
+.compare-image {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s ease;
+}
+
+.compare-image:hover {
+  transform: scale(1.03);
+}
+
+/* responsive */
+@media (max-width: 700px) {
+  .compare-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .compare-item {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

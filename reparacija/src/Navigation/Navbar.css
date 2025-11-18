@@ -1,0 +1,42 @@
+.navbar {
+    width: 100%;
+    background: #0f1a2b;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+    /* pozicija levo je već osigurana flex rasporedom u navbar-u */
+}
+
+.logo-image {
+    height: 100px; /* visina logotipa, prilagodi po potrebi */
+    width: auto;  /* automatska širina da sačuva proporcije */
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-right: 80px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4fa3f7;
+}
