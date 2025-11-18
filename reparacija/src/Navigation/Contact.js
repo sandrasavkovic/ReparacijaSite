@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import './Contact.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const apiUrl = process.env.REACT_APP_API_URL;
 
 export default function Contact() {
   const [formData, setFormData] = useState({
