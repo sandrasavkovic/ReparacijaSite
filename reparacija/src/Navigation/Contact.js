@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './Contact.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+const apiUrl = process.env.REACT_APP_API_URL ;
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -18,7 +19,7 @@ export default function Contact() {
     e.preventDefault();
 
     try {
-      const response = await fetch(`/api/contact`, {
+        const response = await fetch(`${apiUrl}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
