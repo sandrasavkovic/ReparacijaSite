@@ -157,6 +157,11 @@ html, body {
 /* responsiveness */
 /* responsiveness za tablet/mobilni */
 @media (max-width: 1024px) {
+  .carousel-container
+  {
+        padding: 20px 15px;
+
+  }
   .carousel-text {
     font-size: 2rem; /* manji naslov za tablete */
   }
