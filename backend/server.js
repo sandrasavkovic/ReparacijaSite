@@ -9,24 +9,17 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// INIT RESEND
 const resend = new Resend(process.env.RESEND_API_KEY);
-
-app.get('/', (req, res) => {
-  res.send("Server is running");
-});
 
 app.post('/api/contact', async (req, res) => {
   const { name, email, message } = req.body;
-
-  if (!name || !email || !message) {
+  if (!name || !email || !message)
     return res.status(400).json({ error: 'All fields are required.' });
-  }
 
   try {
-    const data = await resend.emails.send({
-      from: 'Reparacija Contact Form <noreply@reparacija.com>', 
-      to: process.env.EMAIL_TO,  // tvoj email koji prima poruke
+    await resend.emails.send({
+      from: 'Reparacija Contact Form <noreply@reparacija.com>',
+      to: process.env.EMAIL_TO,
       subject: `Reparacija - nova poruka od ${name}`,
       text: `${message}\n\nReply to: ${email}`,
     });
@@ -38,6 +31,4 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
