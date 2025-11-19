@@ -58,7 +58,7 @@
   position: absolute;
   top: 100%;
   left: 0;               /* ostaje u početku navbar-a */
-  width: 90%;            /* širina menija */
+  width: 100%;            /* širina menija */
   max-width: 350px;
   padding: 1rem 0;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
