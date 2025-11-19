@@ -155,11 +155,68 @@ html, body {
 
 
 /* responsiveness */
-@media (max-width: 768px) {
-  .carousel-text { font-size: 1.6rem; }
-  .carousel-cta { padding: 10px 16px; font-size: 0.95rem; }
-  .carousel-arrow { font-size: 1.8rem; padding: 6px 10px; }
+/* responsiveness za tablet/mobilni */
+@media (max-width: 1024px) {
+  .carousel-text {
+    font-size: 2rem; /* manji naslov za tablete */
+  }
+  .carousel-inner {
+    width: 85%;
+    height: 85%;
+  }
+  .carousel-cta {
+    padding: 11px 18px;
+    font-size: 1rem;
+  }
+  .carousel-arrow {
+    font-size: 2.2rem;
+    padding: 7px 12px;
+  }
 }
+
+@media (max-width: 768px) {
+  .carousel-text {
+    font-size: 1.6rem; /* manji naslov */
+  }
+  .carousel-inner {
+    width: 90%;
+    height: 90%;
+  }
+  .carousel-cta {
+    padding: 10px 16px;
+    font-size: 0.95rem;
+  }
+  .carousel-arrow {
+    font-size: 1.8rem;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) { /* za telefone */
+  .carousel-text {
+    font-size: 1.2rem; /* još manji naslov */
+  }
+  .carousel-inner {
+    width: 95%;
+    height: 60%; /* smanjena visina da stane na ekran */
+  }
+  .carousel-cta {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+  .carousel-arrow {
+    font-size: 1.5rem;
+    padding: 4px 8px;
+  }
+  .carousel-content {
+    padding: 0 10px;
+  }
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
