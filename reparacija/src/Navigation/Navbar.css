@@ -52,33 +52,32 @@
 }
 
 /* Mobilni meni */
-/* Mobilni meni */
 .nav-links-mobile {
   list-style: none;
   background-color: #0f1a2b;
   position: absolute;
   top: 100%;
-  left: 50%;          /* centriramo meni horizontalno */
-  transform: translateX(-50%); /* pomeramo tačno u centar */
-  width: 90%;          /* smanji širinu da ne bude pun ekran */
-  max-width: 350px;    /* opcionalno, da ne raste previše */
-  text-align: center;
+  left: 0;               /* ostaje u početku navbar-a */
+  width: 90%;            /* širina menija */
+  max-width: 350px;
   padding: 1rem 0;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   border-radius: 12px;
   animation: fadeDown 0.3s ease;
+  text-align: center;    /* centriramo linkove unutar okvira */
 }
 
 /* Linkovi */
 .nav-links-mobile li a {
   display: block;
-  margin: 0.8rem 0;   /* vertikalni razmak između linkova */
+  margin: 0.8rem 0;   
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 500;
-  text-align: center;  /* centriramo tekst */
+  text-align: center;    /* centriramo tekst unutar svakog linka */
 }
+
 
 /* Dugme hamburger */
 .navbar-toggle {
@@ -94,14 +93,23 @@
 
 /* Responsive pravilo */
 @media (max-width: 768px) {
-  .navbar-toggle {
-    display: block;
+  .navbar {
+    padding: 15px 20px;  /* smanjeni padding sa strane */
   }
 
-  .nav-links {
-    display: none; /* sakri desktop linkove */
+  .nav-logo {
+    margin-left: 10px;   /* mali pomak ulevo */
+  }
+
+  .navbar-toggle {
+    margin-right: 10px;  /* pomeri hamburger bliže desnom rubu */
+  }
+
+  .logo-image {
+    height: 80px;  /* smanjena visina logotipa za mobilne */
   }
 }
+
 
 /* Animacija menija */
 @keyframes fadeDown {
