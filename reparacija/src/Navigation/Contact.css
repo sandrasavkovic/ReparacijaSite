@@ -109,8 +109,8 @@
 /* Mobilni telefoni */
 @media (max-width: 480px) {
   .contact-container {
-    padding: 40px 10px;
-    align-items: flex-start;
+       padding: 20px 15px;
+
   }
 
   .contact-box {
